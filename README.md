@@ -10,8 +10,12 @@ Team Member:
 4. Medina Qatrunnada Zulfa - _Hustler_
 
 ## Software Display:
+The app UI is upgraded version of of this Figma Design:
+https://drive.google.com/file/d/1xTOdHi5-8149YNOzTs3g-RqGTTF8wI5l/view
+
 
 ## Hardware Mock Ups:
+Please check hardware files in folder hardware_file
 ![hardware_img1.png](hardware_file%2Fhardware_documentation%2Fhardware_img1.png)
 ![hardware_img2.png](hardware_file%2Fhardware_documentation%2Fhardware_img2.png)
 
