@@ -9,4 +9,9 @@ Anggota:
 3. Alfahri Rifki Fahrezi
 4. Medina Qatrunnada Zulfa
 
+## Tampilan Software:
+
+## Mock up Hardware:
+![hardware_img1.png](hardware_file%2Fhardware_documentation%2Fhardware_img1.png)
+![hardware_img2.png](hardware_file%2Fhardware_documentation%2Fhardware_img2.png)
 

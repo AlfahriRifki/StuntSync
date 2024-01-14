@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#000000"
+  image: assets/logos/stunt-sync-image-logo.png
+  image_dark: assets/logos/stunt-sync-image-logo.png
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#000000"
+    image: assets/logos/stunt-sync-image-logo.png
+    image_dark: assets/logos/stunt-sync-image-logo.png
+
+  web: false

@@ -9,4 +9,8 @@ class SSImages {
   static const String google = 'assets/logos/google-icon.png';
   static const String facebook = 'assets/logos/facebook-icon.png';
 
+  // -- OnBoarding Images
+  static const String onBoardingImage1 = "assets/images/on_boarding_images/onboarding_image_1.png";
+  static const String onBoardingImage2 = "assets/images/on_boarding_images/onboarding_image_2.png";
+  static const String onBoardingImage3 = "assets/images/on_boarding_images/onboarding_image_3.png";
 }

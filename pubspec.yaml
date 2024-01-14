@@ -15,10 +15,11 @@ dependencies:
 
   # Utility Packages
   http: ^1.1.2
-  intl: ^0.18.1
-  logger: ^2.0.1
-  url_launcher: ^6.1.12
+  intl: ^0.19.0
+  logger: ^2.0.2+1
+  url_launcher: ^6.2.3
   flutter_native_splash: ^2.3.9
+  smooth_page_indicator: ^1.1.0
 
   # Icons
   iconsax: ^0.0.8
@@ -34,7 +35,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -45,6 +46,7 @@ flutter:
     - assets/fonts/
     - assets/icons/
     - assets/images/
+    - assets/images/on_boarding_images/
     - assets/logos/
 
   #---------------- LOCAL FONTS -----------------#
