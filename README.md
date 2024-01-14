@@ -10,7 +10,7 @@ Team Member:
 4. Medina Qatrunnada Zulfa - _Hustler_
 
 ## Software Display:
-The app UI is upgraded version of of this Figma Design:
+The app UI is based on this Figma Design with enhancement:
 https://drive.google.com/file/d/1xTOdHi5-8149YNOzTs3g-RqGTTF8wI5l/view
 
 
