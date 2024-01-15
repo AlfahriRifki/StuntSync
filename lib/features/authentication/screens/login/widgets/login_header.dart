@@ -12,6 +12,7 @@ class SSLoginHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = SSHelper.isDarkMode(context);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       // crossAxisAlignment: CrossAxisAlignment.start,

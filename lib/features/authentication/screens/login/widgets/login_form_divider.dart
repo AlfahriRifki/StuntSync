@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper.dart';
 
 
@@ -15,6 +16,7 @@ class SSFormDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = SSHelper.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -32,7 +34,9 @@ class SSFormDivider extends StatelessWidget {
               thickness: 0.5,
               indent: 5,
               endIndent: 60,
-            ))
+            )
+        ),
+        const SizedBox(height: SSSizes.spaceBtwSections),
       ],
     );
   }

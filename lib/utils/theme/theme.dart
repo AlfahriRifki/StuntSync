@@ -8,6 +8,8 @@ import 'package:stuntsync/utils/theme/custom_themes/outlined_button_theme.dart';
 import 'package:stuntsync/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:stuntsync/utils/theme/custom_themes/text_theme.dart';
 
+import '../constants/colors.dart';
+
 // SS = StuntSync
 
 class SSTheme{
@@ -34,7 +36,7 @@ class SSTheme{
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: SSColors.primaryBackground,
     textTheme: SStextTheme.darkTextTheme,
     chipTheme: SSChipTheme.darkChipTheme,
     appBarTheme: SSAppBarTheme.darkAppBarTheme,

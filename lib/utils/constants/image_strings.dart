@@ -13,4 +13,8 @@ class SSImages {
   static const String onBoardingImage1 = "assets/images/on_boarding_images/onboarding_image_1.png";
   static const String onBoardingImage2 = "assets/images/on_boarding_images/onboarding_image_2.png";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/onboarding_image_3.png";
+
+  // -- Email Verification
+  static const String deliveredEmailIllustration = "assets/images/signup_images/email_verification_img.png";
+  static const String accountSuccessIllustration = "assets/images/signup_images/create_account_success_img.png";
 }

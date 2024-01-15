@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:stuntsync/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:stuntsync/features/authentication/screens/login/widgets/login_form_divider.dart';
 import 'package:stuntsync/features/authentication/screens/login/widgets/login_header.dart';
+import 'package:stuntsync/features/authentication/screens/login/widgets/social_buttons.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -23,7 +24,7 @@ class LoginPage extends StatelessWidget {
                 const SSLoginForm(),
                 SSFormDivider(dividerText: SSText.orSignInWith.capitalize!),
                 const SizedBox(height: SSSizes.spaceBtwItems),
-                // const SSSocialButtons()
+                const SSSocialButtons()
               ],
             ),
           ),
