@@ -15,7 +15,8 @@ class SSSignupForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-        child: Column(
+        child:
+        Column(
           children: [
             /// First name & Last name
             Row(

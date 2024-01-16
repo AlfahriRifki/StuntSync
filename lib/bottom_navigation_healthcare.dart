@@ -6,8 +6,8 @@ import 'package:stuntsync/utils/helpers/helper.dart';
 
 import 'features/home/screens/home.dart';
 
-class BottomNavigation extends StatelessWidget {
-  const BottomNavigation({super.key});
+class BottomNavigationHealthcare extends StatelessWidget {
+  const BottomNavigationHealthcare({super.key});
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(BottomNavigationController());
@@ -26,10 +26,10 @@ class BottomNavigation extends StatelessWidget {
 
             destinations: const [
               NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-              NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
+              NavigationDestination(icon: Icon(Iconsax.activity), label: 'Statistic'),
               NavigationDestination(
-                  icon: Icon(Iconsax.heart), label: 'Wishlist'),
-              NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+                  icon: Icon(Iconsax.message), label: 'Chat'),
+              NavigationDestination(icon: Icon(Iconsax.setting), label: 'Settings'),
             ]),
       ),
       body: Obx(() => controller.screen[controller._selectedIndex.value]),

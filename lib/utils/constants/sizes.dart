@@ -39,6 +39,8 @@ class SSSizes {
   static const double borderRadiusSm = 4.0;
   static const double borderRadiusMd = 8.0;
   static const double borderRadiusLg = 12.0;
+  static const double borderRadiusAvatar = 18.0;
+  static const double borderRadiusAvatarLg = 26.0;
 
   // Divider Height
   static const double dividerHeight = 1.0;

@@ -18,12 +18,15 @@ class SSLoginHeader extends StatelessWidget {
       // crossAxisAlignment: CrossAxisAlignment.start,
       /// Logo, Title, Subtitle
       children: [
+        /// Logo
         Image(
           height: 150,
           image: AssetImage(dark ? SSImages.appImageLogo : SSImages.appImageLogo)),
+        /// Tittle
         Text(SSText.loginTitle,
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: SSSizes.sm),
+        /// Sub-tittle
         Text(SSText.loginSubTitle,
             style: Theme.of(context).textTheme.bodyMedium),
       ],

@@ -20,6 +20,7 @@ dependencies:
   url_launcher: ^6.2.3
   flutter_native_splash: ^2.3.9
   smooth_page_indicator: ^1.1.0
+  auto_size_text: ^3.0.0
 
   # Icons
   iconsax: ^0.0.8
@@ -45,6 +46,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/icons/
+    - assets/images/
     - assets/images/on_boarding_images/
     - assets/images/signup_images/
     - assets/logos/

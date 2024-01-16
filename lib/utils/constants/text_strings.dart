@@ -1,4 +1,3 @@
-
 /// Class for all the App Text in String formats.
 class SSText {
   // -- Global Text
@@ -32,6 +31,8 @@ class SSText {
   static const String rememberMe = "Remember Me";
   static const String forgetPassword = "Forget Password?";
   static const String signIn = "Sign In";
+  static const String signInParent = "Sign In as Parent";
+  static const String signInHealthcareStaff = "Sign In as Healthcare Staff";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
@@ -41,11 +42,14 @@ class SSText {
   static const String verificationCode = "verificationCode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String parent = "Parent";
+  static const String healthcareStaff = "Healthcare Staff";
 
   // -- Authentication Headings
   static const String loginTitle = "Welcome,";
   static const String loginSubTitle = "Please Sign In";
   static const String signupTitle = "Let’s create your account";
+  static const String chooseRoleTitle = "Sign up as?";
   static const String forgetPasswordTitle = "Forget password";
   static const String forgetPasswordSubTitle =
       "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
@@ -63,7 +67,17 @@ class SSText {
       "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
 
   // -- Home
-  static const String homeAppBarTitle = "homeAppBarTitle";
-  static const String homeAppBarSubTitle = "homeAppBarSubTitle";
-
+  static const String homeAppBarTitle = "Welcome";
+  static const String homeAppBarSubTitle = "Halo, Name";
+  static const String kidsName = "Angelia Emily";
+  static const String kidsAge = "2 years old";
+  static const String daysLeft = "7 days left";
+  static const String nextCheck = "until next check";
+  static const String recommendation = "Recommendation";
+  static const String recommendationDetails =
+      "Ensure they receive a balanced diet rich in protein, calcium, vitamin D, and provide "
+      "physical stimulation through exercise or activities that stimulate bone and muscle growth.";
+  static const String height = "Height";
+  static const String weight = "Weight";
+  static const String bmi = "BMI (Body Mass Index)";
 }

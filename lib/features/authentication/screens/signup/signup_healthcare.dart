@@ -7,8 +7,8 @@ import '../../../../utils/constants/text_strings.dart';
 import '../login/widgets/login_form_divider.dart';
 import '../login/widgets/social_buttons.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class SignupPageHealthcare extends StatelessWidget {
+  const SignupPageHealthcare({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +22,15 @@ class SignupPage extends StatelessWidget {
               /// Title
               Text(SSText.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium),
+
+              /// Sub-tittle
+              Text(SSText.healthcareStaff,
+                  style: Theme.of(context).textTheme.bodyMedium),
               const SizedBox(height: SSSizes.spaceBtwSections),
 
               /// Form
               const SSSignupForm(),
+
               const SizedBox(height: SSSizes.spaceBtwSections),
 
               /// Divider

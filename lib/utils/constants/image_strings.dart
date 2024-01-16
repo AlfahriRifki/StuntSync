@@ -17,4 +17,14 @@ class SSImages {
   // -- Email Verification
   static const String deliveredEmailIllustration = "assets/images/signup_images/email_verification_img.png";
   static const String accountSuccessIllustration = "assets/images/signup_images/create_account_success_img.png";
+
+  // -- Choose Your Role Page
+  static const String parentImage = "assets/images/signup_images/parent_img.png";
+  static const String healthCareImage = "assets/images/signup_images/healthcare_staff_img.png";
+
+  // -- Kids profile
+  static const String kidsImage = "assets/images/signup_images/kids_img.png";
+
+  // -- Profile
+  static const String user = "assets/images/signup_images/healthcare_staff_img.png";
 }
