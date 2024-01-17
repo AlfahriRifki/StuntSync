@@ -5,8 +5,6 @@ import 'package:stuntsync/features/home/screens/widgets/kids_column.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
+import 'package:stuntsync/features/chat/screens/chat.dart';
 import 'package:stuntsync/utils/constants/colors.dart';
 import 'package:stuntsync/utils/constants/image_strings.dart';
 import 'package:stuntsync/utils/constants/sizes.dart';
@@ -73,13 +74,11 @@ class BottomNavigationController extends GetxController {
   final screen = [
     const HomeScreen(),
     Container(
-      color: Colors.blue,
-    ),
-    Container(
       color: Colors.green,
     ),
     Container(
       color: Colors.yellow,
     ),
+    const ChatScreen(),
   ];
 }
