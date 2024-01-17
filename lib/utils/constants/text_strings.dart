@@ -68,7 +68,7 @@ class SSText {
 
   // -- Home
   static const String homeAppBarTitle = "Welcome";
-  static const String homeAppBarSubTitle = "Halo, Name";
+  static const String homeAppBarSubTitle = "Halo, John";
   static const String kidsName = "Angelia Emily";
   static const String kidsAge = "2 years old";
   static const String daysLeft = "7 days left";

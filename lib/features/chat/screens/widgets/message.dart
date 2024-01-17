@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../../../../utils/constants/colors.dart';
 import 'chat_scr_state.dart';
 
 Widget message(String urlImage, String title, String onOff, context) {
   // clickContact
   return Scaffold(
     appBar: AppBar(
+      backgroundColor: SSColors.primary,
       titleSpacing: 0.0,
       leading: IconButton(
         onPressed: () {

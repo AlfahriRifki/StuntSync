@@ -16,7 +16,7 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           contact(
             'assets/icons/profile.png',
-            'Ayoub',
+            "RSUP Dr Sardjito Admin",
             '19:30',
             'online',
             'Chokran bezaf khouya',
@@ -24,7 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Anas',
+            "RS Muhammadiyah Yogyakarta Admin",
             '10:05',
             'online',
             'Inchaalah nji andek...',
@@ -32,7 +32,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Hamid',
+            "RS Ludira Husada Tama Admin",
             '18:20',
             'online',
             'Merci beaucoup frero',
@@ -40,7 +40,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'yassine',
+            "RS Islam Hidayatullah Admin",
             '12:10',
             'online',
             'Thank so much for your help',
@@ -48,7 +48,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Ayman',
+            "RS Happy Land Admin",
             '16:45',
             'online',
             'Am in the way, just 5 min...',
@@ -56,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Achraf',
+            "RS Dr. Yap Yogyakarta Admin",
             '19:30',
             'online',
             'Fin nta db, ana f casa...',
@@ -64,7 +64,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Hamza',
+            "RS Dr. Soetarto Admin",
             'Yesterday',
             'online',
             'Can you explain to me ?',
@@ -72,7 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'youssef',
+            "RS Bethesda Yogyakarta Admin",
             'Yesterday',
             'online',
             'Salam alaykom...',
@@ -80,7 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Mohamed',
+            "RS Bethesda Lempuyangwangi Admin",
             'Yesterday',
             'online',
             'Lktab lakhor zwin bezaf',
@@ -88,7 +88,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'tariq',
+            "RS Dr Soetarto Admin",
             '4/23/22',
             'online',
             'Wach chritiha men tema',
@@ -96,7 +96,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Adam',
+            "RSUD Kota Yogyakarta Admin",
             '4/23/22',
             'online',
             'Kif halek bikhir, kolchi mzn',
@@ -104,7 +104,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           contact(
             'assets/icons/profile.png',
-            'Islam',
+            "Puskesmas Sinduadi Admin",
             '4/23/22',
             'online',
             'It\'s a great story',

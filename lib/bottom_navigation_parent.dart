@@ -8,6 +8,8 @@ import 'package:stuntsync/utils/constants/sizes.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import 'features/home/screens/home.dart';
+import 'features/information/screens/information.dart';
+import 'features/statistic/statistic.dart';
 
 class BottomNavigationParent extends StatelessWidget {
   const BottomNavigationParent({super.key});
@@ -26,11 +28,8 @@ class BottomNavigationParent extends StatelessWidget {
                 elevation: 0,
                 onDestinationSelected: (index) =>
                 controller._selectedIndex.value = index,
-                backgroundColor: dark ? SSColors.primaryBackground : Colors
-                    .white,
-                indicatorColor: dark
-                    ? SSColors.white.withOpacity(0.1)
-                    : SSColors.black.withOpacity(0.1),
+                backgroundColor: dark ? Colors.black38 : SSColors.primaryBackground.withOpacity(0.1),
+                indicatorColor: SSColors.white.withOpacity(0.1),
                 destinations:  [
                   const NavigationDestination(
                       icon: Icon(Iconsax.home), label: 'Home'),
@@ -73,12 +72,8 @@ class BottomNavigationController extends GetxController {
   final Rx<int> _selectedIndex = 0.obs;
   final screen = [
     const HomeScreen(),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.yellow,
-    ),
+    const MealPlannerView(),
+    const Information(),
     const ChatScreen(),
   ];
 }

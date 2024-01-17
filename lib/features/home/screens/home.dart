@@ -2,9 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:stuntsync/features/home/screens/widgets/home_appbar.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_column.dart';
+import 'package:stuntsync/features/home/screens/widgets/kids_param.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
 
@@ -42,24 +44,33 @@ class HomeScreen extends StatelessWidget {
                 // Get.to(() => const BottomNavigationParent());
               },
               style: ElevatedButton.styleFrom(
+                side: const BorderSide(color: Color(0xFF61A3BA)),
                 alignment: Alignment.topLeft,
                 padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
+                backgroundColor:
+                    dark ? SSColors.white : const Color(0xFF61A3BA),
               ),
-              child: const Column(
+              child: Column(
                 children: [
                   Row(
                     children: [
-                      SizedBox(width: SSSizes.spaceBtwItems),
-                      Text(SSText.recommendation),
+                      const SizedBox(width: SSSizes.spaceBtwItems),
+                      Text(
+                        SSText.recommendation,
+                        style: TextStyle(
+                            color: dark ? SSColors.primaryBackground : SSColors.black),
+                      ),
                     ],
                   ),
                   Row(
                     children: [
-                      SizedBox(width: SSSizes.spaceBtwItems),
+                      const SizedBox(width: SSSizes.spaceBtwItems),
                       Expanded(
                           child: AutoSizeText(
                         SSText.recommendationDetails,
                         maxLines: 4,
+                        style: TextStyle(
+                            color: dark ? SSColors.primaryBackground : SSColors.black),
                       )),
                     ],
                   ),
@@ -68,24 +79,24 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: SSSizes.spaceBtwSections),
+          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
           /// Height
-          SizedBox(
-            width: 380.0,
-            child: ElevatedButton(
-                onPressed: () {
-                  // Get.to(() => const BottomNavigationParent());
-                },
-                style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0)),
-                child: const Text(SSText.height)),
-          ),
+          kids_parameter(dark: dark,tittle: SSText.height),
+
+          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
           /// Weight
+          kids_parameter(dark: dark,tittle: SSText.weight),
+
+          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
+
           /// BMI
+          kids_parameter(dark: dark,tittle: SSText.bmi),
+
         ],
       ),
     ));
   }
 }
+

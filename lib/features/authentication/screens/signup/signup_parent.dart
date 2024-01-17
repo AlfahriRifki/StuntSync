@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stuntsync/features/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:stuntsync/features/authentication/screens/signup/widgets/signup_form_parent.dart';
 
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
@@ -29,7 +29,7 @@ class SignupPageParent extends StatelessWidget {
               const SizedBox(height: SSSizes.spaceBtwSections),
 
               /// Form
-              const SSSignupForm(),
+              const SSSignupFormParent(),
 
               const SizedBox(height: SSSizes.spaceBtwSections),
 
