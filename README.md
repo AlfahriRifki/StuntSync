@@ -13,10 +13,10 @@ Team Member:
 The app UI is based on this Figma Design with enhancement:
 https://drive.google.com/file/d/1xTOdHi5-8149YNOzTs3g-RqGTTF8wI5l/view
 
-![Screenshot 2024-01-19 001219.png](assets%2FAPP%20UI%20Screen%2FScreenshot%202024-01-19%20001219.png)
-![Screenshot 2024-01-19 001227.png](assets%2FAPP%20UI%20Screen%2FScreenshot%202024-01-19%20001227.png)
-![Screenshot 2024-01-19 001356.png](assets%2FAPP%20UI%20Screen%2FScreenshot%202024-01-19%20001356.png)
-![Screenshot 2024-01-19 001502.png](assets%2FAPP%20UI%20Screen%2FScreenshot%202024-01-19%20001502.png)
+![app1.png](assets%2FAPP%20UI%20Screen%2Fapp1.png)
+![app2.png](assets%2FAPP%20UI%20Screen%2Fapp2.png)
+![app3.png](assets%2FAPP%20UI%20Screen%2Fapp3.png)
+![app4.png](assets%2FAPP%20UI%20Screen%2Fapp4.png)
 
 
 ## Hardware Mock Ups:
