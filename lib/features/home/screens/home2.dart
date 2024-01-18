@@ -89,17 +89,17 @@ class HomeScreen2 extends StatelessWidget {
           const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
           /// Height
-          KidsParam(dark: dark,tittle: SSText.height),
+          KidsParam(dark: dark,value: '120',tittle: SSText.height),
 
           const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
           /// Weight
-          KidsParam(dark: dark,tittle: SSText.weight),
+          KidsParam(dark: dark, value: '40', tittle: SSText.weight),
 
           const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
           /// BMI
-          KidsParam(dark: dark,tittle: SSText.bmi),
+          KidsParam(dark: dark, value: '18',tittle: SSText.bmi),
 
         ],
       ),

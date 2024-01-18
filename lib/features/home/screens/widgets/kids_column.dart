@@ -53,7 +53,7 @@ class SSKidsColumn extends StatelessWidget {
             ],
           ),
 
-          const SizedBox(width: SSSizes.spaceBtwSections * 2),
+          const SizedBox(width: SSSizes.spaceBtwSections ),
 
           /// Check up Schedule
           Column(

@@ -30,4 +30,9 @@ class SSImages {
 
   // -- Profile
   static const String user = "assets/images/signup_images/healthcare_staff_img.png";
+
+  // -- Home
+  static const String sardjito = "assets/images/home_images/sardjito.jpg";
+  static const String bethesda = "assets/images/home_images/bethesda.jpg";
+  static const String pantiRapih = "assets/images/home_images/panti rapih.jpeg";
 }

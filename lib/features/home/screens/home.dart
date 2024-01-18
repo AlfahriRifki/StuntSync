@@ -1,10 +1,9 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:stuntsync/features/home/screens/widgets/add_height.dart';
 import 'package:stuntsync/features/home/screens/widgets/add_weight.dart';
 import 'package:stuntsync/features/home/screens/widgets/home_appbar.dart';
+import 'package:stuntsync/features/home/screens/widgets/home_slider.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_column.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_param.dart';
 import 'package:stuntsync/utils/constants/image_strings.dart';
@@ -31,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SSHomeAppBar(),
-                  SizedBox(height: 80),
+                  SizedBox(height: 40),
                 ],
               ),
             ),
@@ -43,108 +42,89 @@ class HomeScreen extends StatelessWidget {
               kidsAge: "2 Years Old",
               kidsImage: SSImages.kidsImage,
             ),
+            const SizedBox(height: SSSizes.sm),
 
-            const SizedBox(height: SSSizes.spaceBtwSections),
+            /// Heading
+            Text(
+              "Nearby Healthcare Institution",
+              style: Theme.of(Get.context!).textTheme.headlineSmall,
+              textAlign: TextAlign.left,
+            ),
 
-            /// Recommendation
-            SizedBox(
-              width: 380.0,
-              child: ElevatedButton(
-                onPressed: () {
-                  // Get.to(() => const BottomNavigationParent());
-                },
-                style: ElevatedButton.styleFrom(
-                  elevation: 5,
-                  side: BorderSide(
-                      color: dark ? SSColors.white : SSColors.lightGrey),
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
-                  backgroundColor: dark ? SSColors.white : SSColors.lightGrey,
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        const SizedBox(width: SSSizes.spaceBtwItems),
-                        Text(
-                          SSText.recommendation,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall
-                              ?.copyWith(color: SSColors.buttonPrimary),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const SizedBox(width: SSSizes.spaceBtwItems),
-                        Expanded(
-                          child: AutoSizeText(
-                            SSText.recommendationDetails,
-                            maxLines: 4,
-                            style: TextStyle(
-                                color: dark
-                                    ? SSColors.primaryBackground
-                                    : SSColors.black),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+            /// Nearby Healthcare Institution
+            Padding(
+              padding: const EdgeInsets.only(top: 7.0),
+              child: Column(
+                children: [
+                  /// Promo Slider
+                  const SSHomeSlider(
+                    banners: [
+                      (SSImages.pantiRapih),
+                      (SSImages.sardjito),
+                      (SSImages.bethesda),
+                    ],
+                  ),
+                  KidsParam(
+                    dark: dark,
+                    tittle: SSText.height,
+                    value: "78.3",
+                    onPressed: () => Get.to(() => const AddHeightScreen()),
+                  ),
+
+                  /// Weight
+                  KidsParam(
+                      dark: dark,
+                      tittle: SSText.weight,
+                      value: "11.3",
+                      onPressed: () => Get.to(() => const AddWeightScreen())),
+
+                ],
               ),
             ),
 
-            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
-
-            /// Height
-            KidsParam(
-              dark: dark,
-              tittle: SSText.height,
-              onPressed: () => Get.to(() => const AddHeightScreen()),
-            ),
-
-            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
-
-            /// Weight
-            KidsParam(
-                dark: dark,
-                tittle: SSText.weight,
-                onPressed: () => Get.to(() => const AddWeightScreen())),
-
-            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
-
             /// BMI
-            SizedBox(
-              width: 380.0,
-              height: 115,
-              child: ElevatedButton(
-                onPressed: () {
-                  // Get.to(() => const BottomNavigationParent());
-                },
-                style: ElevatedButton.styleFrom(
-                  elevation: 5,
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
-                  backgroundColor: dark ? SSColors.white : SSColors.lightGrey,
-                  side: BorderSide(
-                      color: dark ? SSColors.white : SSColors.lightGrey),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        const SizedBox(width: SSSizes.spaceBtwItems),
-                        Text(
-                          SSText.bmi,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall
-                              ?.copyWith(color: SSColors.darkerGrey),
-                        ),
-                      ],
-                    ),
-                  ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
+              child: SizedBox(
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Get.to(() => const BottomNavigationParent());
+                  },
+                  style: ElevatedButton.styleFrom(
+                    elevation: 5,
+                    alignment: Alignment.topLeft,
+                    padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
+                    backgroundColor: dark ? SSColors.white : SSColors.lightGrey,
+                    side: BorderSide(
+                        color: dark ? SSColors.white : SSColors.lightGrey),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          const SizedBox(width: SSSizes.spaceBtwItems),
+                          Text(
+                            SSText.bmi,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineSmall
+                                ?.copyWith(color: SSColors.darkerGrey),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: SSSizes.spaceBtwItems),
+                      Row(
+                        children: [
+                          const SizedBox(width: SSSizes.defaultSpace),
+                          Text('18.4',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineMedium
+                                  ?.copyWith(color: SSColors.primaryBackground)),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:stuntsync/features/statistic/widgets/card.dart';
-import 'package:stuntsync/utils/constants/image_strings.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../common/dummy/color.dart';
@@ -232,12 +229,12 @@ class _StatisticPageState extends State<StatisticPage> {
                       )
                   ),
                   const SizedBox(height: SSSizes.defaultSpace),
-                  KidsParam(dark: dark, tittle: SSText.height),
+                  KidsParam(dark: dark, value: '78.3', tittle: SSText.height),
                   const SizedBox(height: SSSizes.defaultSpace),
-                  Stack(children: [
-                    KidsParam(dark: dark, tittle: SSText.recommendation),
-                  ],
-                  )
+                  // Stack(children: [
+                  //   KidsParam(dark: dark, tittle: SSText.recommendation),
+                  // ],
+                  // )
                 ],
               ),
 
