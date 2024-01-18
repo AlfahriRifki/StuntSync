@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stuntsync/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:stuntsync/utils/constants/colors.dart';
 import 'package:stuntsync/utils/theme/theme.dart';
 
