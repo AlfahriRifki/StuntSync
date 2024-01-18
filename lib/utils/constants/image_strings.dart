@@ -24,6 +24,7 @@ class SSImages {
 
   // -- Kids profile
   static const String kidsImage = "assets/images/signup_images/kids_img.png";
+  static const String kids2Image = "assets/images/signup_images/kids2_img.png";
 
   // -- Profile
   static const String user = "assets/images/signup_images/healthcare_staff_img.png";

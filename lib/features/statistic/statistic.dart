@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../common/dummy/color.dart';
 import '../../utils/constants/colors.dart';
+import '../../utils/constants/sizes.dart';
 import '../../utils/constants/text_strings.dart';
 
 
-class MealPlannerView extends StatefulWidget {
-  const MealPlannerView({super.key});
+class StatisticPage extends StatefulWidget {
+  const StatisticPage({super.key});
 
   @override
-  State<MealPlannerView> createState() => _MealPlannerViewState();
+  State<StatisticPage> createState() => _StatisticPageState();
 }
 
-class _MealPlannerViewState extends State<MealPlannerView> {
+class _StatisticPageState extends State<StatisticPage> {
+  int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -35,11 +39,31 @@ class _MealPlannerViewState extends State<MealPlannerView> {
           style: TextStyle(
               color: SSColors.white, fontSize: 16, fontWeight: FontWeight.w700),
         ),
+
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child:
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: SSSizes.sm),
+            Center(
+              child:
+                CupertinoSlidingSegmentedControl(
+                    groupValue: activeIndex,
+                    children: const {
+                      0: Text("Height"),
+                      1: Text("Weight"),
+                      2: Text("BMI"),
+                    },
+                    onValueChanged: (value) {
+                      setState(() {
+                        activeIndex = value!;
+                      });
+                    }
+                ),
+              ),
+
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -189,7 +213,7 @@ class _MealPlannerViewState extends State<MealPlannerView> {
                             drawVerticalLine: false,
                             getDrawingHorizontalLine: (value) {
                               return FlLine(
-                                color: dark 
+                                color: dark
                                     ? SSColors.white.withOpacity(0.60)
                                     : SSColors.grey,
                                 strokeWidth: 2,

@@ -4,8 +4,8 @@ import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
 
-class kids_parameter extends StatelessWidget {
-  const kids_parameter({
+class KidsParam extends StatelessWidget {
+  const KidsParam({
     super.key,
     required this.dark, required this.tittle,
   });

@@ -8,10 +8,11 @@ import '../../../../utils/constants/text_strings.dart';
 class SSKidsColumn extends StatelessWidget {
   const SSKidsColumn({
     super.key,
-    required this.dark,
+    required this.dark, required this.kidsName, required this.kidsAge, required this.kidsImage,
   });
 
   final bool dark;
+  final String kidsName, kidsAge, kidsImage;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +27,9 @@ class SSKidsColumn extends StatelessWidget {
             iconSize: SSSizes.borderRadiusAvatarLg,
             onPressed: () {},
             icon:
-            const CircleAvatar(
+            CircleAvatar(
               radius: SSSizes.borderRadiusAvatarLg,
-              backgroundImage: ExactAssetImage(SSImages.kidsImage),
+              backgroundImage: ExactAssetImage(kidsImage),
               backgroundColor: SSColors.buttonPrimary,
             ),
           ),
@@ -39,12 +40,12 @@ class SSKidsColumn extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(SSText.kidsName,
+              Text(kidsName,
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall!
                       .apply(color: dark ? SSColors.white : SSColors.black)),
-              Text(SSText.kidsAge,
+              Text(kidsAge,
                   style: Theme.of(context)
                       .textTheme
                       .labelSmall!

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:stuntsync/features/home/screens/widgets/home_appbar.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_column.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_param.dart';
+import 'package:stuntsync/utils/constants/image_strings.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -18,85 +19,94 @@ class HomeScreen extends StatelessWidget {
     final dark = SSHelper.isDarkMode(context);
 
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: [
-          /// Header
-          const SSPrimaryHeaderContainer(
-            child: Column(
-              children: [
-                SSHomeAppBar(),
-                SizedBox(height: 80),
-              ],
-            ),
-          ),
-
-          /// Kids Column
-          SSKidsColumn(dark: dark),
-
-          const SizedBox(height: SSSizes.spaceBtwSections),
-
-          /// Recommendation
-          SizedBox(
-            width: 380.0,
-            child: ElevatedButton(
-              onPressed: () {
-                // Get.to(() => const BottomNavigationParent());
-              },
-              style: ElevatedButton.styleFrom(
-                side: const BorderSide(color: Color(0xFF61A3BA)),
-                alignment: Alignment.topLeft,
-                padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
-                backgroundColor:
-                    dark ? SSColors.white : const Color(0xFF61A3BA),
-              ),
+      body: SingleChildScrollView(child:
+        Column(
+          children: [
+            /// Header
+            const SSPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      const SizedBox(width: SSSizes.spaceBtwItems),
-                      Text(
-                        SSText.recommendation,
-                        style: TextStyle(
-                            color: dark ? SSColors.primaryBackground : SSColors.black),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      const SizedBox(width: SSSizes.spaceBtwItems),
-                      Expanded(
-                          child: AutoSizeText(
-                        SSText.recommendationDetails,
-                        maxLines: 4,
-                        style: TextStyle(
-                            color: dark ? SSColors.primaryBackground : SSColors.black),
-                      )),
-                    ],
-                  ),
+                  SSHomeAppBar(),
+                  SizedBox(height: 80),
                 ],
               ),
             ),
-          ),
 
-          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
+            /// Kids Column
+            SSKidsColumn(
+              dark: dark,
+              kidsName: "Angelia Emily",
+              kidsAge: "2 Years Old",
+              kidsImage: SSImages.kidsImage,
+            ),
 
-          /// Height
-          kids_parameter(dark: dark,tittle: SSText.height),
+            const SizedBox(height: SSSizes.spaceBtwSections),
 
-          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
+            /// Recommendation
+            SizedBox(
+              width: 380.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  // Get.to(() => const BottomNavigationParent());
+                },
+                style: ElevatedButton.styleFrom(
+                  elevation: 5,
+                  side: const BorderSide(color: Color(0xFF61A3BA)),
+                  alignment: Alignment.topLeft,
+                  padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
+                  backgroundColor:
+                      dark ? SSColors.white : const Color(0xFF61A3BA),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(width: SSSizes.spaceBtwItems),
+                        Text(
+                          SSText.recommendation,
+                          style: TextStyle(
+                              color: dark
+                                  ? SSColors.primaryBackground
+                                  : SSColors.black),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const SizedBox(width: SSSizes.spaceBtwItems),
+                        Expanded(
+                            child: AutoSizeText(
+                          SSText.recommendationDetails,
+                          maxLines: 4,
+                          style: TextStyle(
+                              color: dark
+                                  ? SSColors.primaryBackground
+                                  : SSColors.black),
+                        )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
 
-          /// Weight
-          kids_parameter(dark: dark,tittle: SSText.weight),
+            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
-          const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
+            /// Height
+            KidsParam(dark: dark, tittle: SSText.height),
 
-          /// BMI
-          kids_parameter(dark: dark,tittle: SSText.bmi),
+            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
-        ],
-      ),
-    ));
+            /// Weight
+            KidsParam(dark: dark, tittle: SSText.weight),
+
+            const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
+
+            /// BMI
+            KidsParam(dark: dark, tittle: SSText.bmi),
+          ],
+        ),
+      )
+    );
   }
 }
-
