@@ -59,6 +59,7 @@ class KidsParam extends StatelessWidget {
                         ?.copyWith(color: SSColors.primaryBackground)),
               ],
             ),
+            const SizedBox(height: SSSizes.spaceBtwItems),
           ]),
         ),
       ),

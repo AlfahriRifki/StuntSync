@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
 
             /// BMI
             Padding(
-              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
+              padding: const EdgeInsets.all(20),
               child: SizedBox(
                 child: ElevatedButton(
                   onPressed: () {
