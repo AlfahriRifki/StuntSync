@@ -21,7 +21,7 @@ class SSSuccessScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
           child: Padding(
-            padding: SSSpacingStyles.paddingWithAppBarHeight * 2,
+            padding: SSSpacingStyle.paddingWithAppBarHeight * 2,
             child: Column(
               children: [
 

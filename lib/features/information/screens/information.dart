@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../models/article_model.dart';
@@ -12,7 +13,6 @@ import '../services/news.dart';
 import '../services/slider_data.dart';
 import 'all_news.dart';
 import 'article_view.dart';
-import 'category_news.dart';
 
 class Information extends StatefulWidget {
   const Information({super.key});
@@ -57,6 +57,7 @@ class _InformationState extends State<Information> {
 
   @override
   Widget build(BuildContext context) {
+    final dark = SSHelper.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: SSColors.primary,
@@ -82,10 +83,10 @@ class _InformationState extends State<Information> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     "News From Government",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: dark ? SSColors.white : Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0),
                   ),
@@ -138,10 +139,10 @@ class _InformationState extends State<Information> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     "Article for your Health",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: dark ? SSColors.white : Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0),
                   ),
@@ -232,6 +233,7 @@ class BlogTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = SSHelper.isDarkMode(context);
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context)=> ArticleView(blogUrl:url )));
@@ -268,8 +270,8 @@ class BlogTile extends StatelessWidget {
                         child: Text(
                           title,
                           maxLines: 2,
-                          style: const TextStyle(
-                              color: Colors.black,
+                          style: TextStyle(
+                              color: dark ? SSColors.white : Colors.black,
                               fontWeight: FontWeight.w500,
                               fontSize: 17.0),
                         ),
@@ -282,8 +284,8 @@ class BlogTile extends StatelessWidget {
                         child: Text(
                           desc,
                           maxLines: 3,
-                          style: const TextStyle(
-                              color: Colors.black54,
+                          style: TextStyle(
+                              color: dark ? SSColors.white : Colors.black,
                               fontWeight: FontWeight.w500,
                               fontSize: 15.0),
                         ),

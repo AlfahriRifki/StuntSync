@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "396336759987",
+    "project_id": "stuntsync",
+    "storage_bucket": "stuntsync.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396336759987:android:58cfc9751da4f320599cc6",
+        "android_client_info": {
+          "package_name": "com.stuntsync.stuntsync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396336759987-6goutq33htahleuu1iv0gnk2t409n5p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stuntsync.stuntsync",
+            "certificate_hash": "23ce14345bc30ccdcfe405c5bf634ecd1eee333e"
+          }
+        },
+        {
+          "client_id": "396336759987-mchnadterkfuqri3h8cn8iigih7fkdn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4a8Ibqw0os2l-tfI27OvKR-vDfijRGW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396336759987-mchnadterkfuqri3h8cn8iigih7fkdn5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "396336759987-14cqk8u2tn1qae1v4ts2rbnc57hhka93.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stuntsync.stuntsync"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

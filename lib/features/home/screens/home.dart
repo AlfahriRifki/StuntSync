@@ -1,5 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:stuntsync/features/home/screens/widgets/add_height.dart';
+import 'package:stuntsync/features/home/screens/widgets/add_weight.dart';
 import 'package:stuntsync/features/home/screens/widgets/home_appbar.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_column.dart';
 import 'package:stuntsync/features/home/screens/widgets/kids_param.dart';
@@ -19,8 +23,8 @@ class HomeScreen extends StatelessWidget {
     final dark = SSHelper.isDarkMode(context);
 
     return Scaffold(
-      body: SingleChildScrollView(child:
-        Column(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             /// Header
             const SSPrimaryHeaderContainer(
@@ -51,11 +55,11 @@ class HomeScreen extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   elevation: 5,
-                  side: const BorderSide(color: Color(0xFF61A3BA)),
+                  side: BorderSide(
+                      color: dark ? SSColors.white : SSColors.lightGrey),
                   alignment: Alignment.topLeft,
                   padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
-                  backgroundColor:
-                      dark ? SSColors.white : const Color(0xFF61A3BA),
+                  backgroundColor: dark ? SSColors.white : SSColors.lightGrey,
                 ),
                 child: Column(
                   children: [
@@ -64,10 +68,10 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(width: SSSizes.spaceBtwItems),
                         Text(
                           SSText.recommendation,
-                          style: TextStyle(
-                              color: dark
-                                  ? SSColors.primaryBackground
-                                  : SSColors.black),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
+                              ?.copyWith(color: SSColors.buttonPrimary),
                         ),
                       ],
                     ),
@@ -75,14 +79,15 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         const SizedBox(width: SSSizes.spaceBtwItems),
                         Expanded(
-                            child: AutoSizeText(
-                          SSText.recommendationDetails,
-                          maxLines: 4,
-                          style: TextStyle(
-                              color: dark
-                                  ? SSColors.primaryBackground
-                                  : SSColors.black),
-                        )),
+                          child: AutoSizeText(
+                            SSText.recommendationDetails,
+                            maxLines: 4,
+                            style: TextStyle(
+                                color: dark
+                                    ? SSColors.primaryBackground
+                                    : SSColors.black),
+                          ),
+                        ),
                       ],
                     ),
                   ],
@@ -93,20 +98,59 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
             /// Height
-            KidsParam(dark: dark, tittle: SSText.height),
+            KidsParam(
+              dark: dark,
+              tittle: SSText.height,
+              onPressed: () => Get.to(() => const AddHeightScreen()),
+            ),
 
             const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
             /// Weight
-            KidsParam(dark: dark, tittle: SSText.weight),
+            KidsParam(
+                dark: dark,
+                tittle: SSText.weight,
+                onPressed: () => Get.to(() => const AddWeightScreen())),
 
             const SizedBox(height: SSSizes.spaceBtwSections * 0.5),
 
             /// BMI
-            KidsParam(dark: dark, tittle: SSText.bmi),
+            SizedBox(
+              width: 380.0,
+              height: 115,
+              child: ElevatedButton(
+                onPressed: () {
+                  // Get.to(() => const BottomNavigationParent());
+                },
+                style: ElevatedButton.styleFrom(
+                  elevation: 5,
+                  alignment: Alignment.topLeft,
+                  padding: const EdgeInsets.fromLTRB(2.0, 10.0, 90.0, 30.0),
+                  backgroundColor: dark ? SSColors.white : SSColors.lightGrey,
+                  side: BorderSide(
+                      color: dark ? SSColors.white : SSColors.lightGrey),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(width: SSSizes.spaceBtwItems),
+                        Text(
+                          SSText.bmi,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
+                              ?.copyWith(color: SSColors.darkerGrey),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }

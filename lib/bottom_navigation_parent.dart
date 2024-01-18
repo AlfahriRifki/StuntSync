@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:stuntsync/features/chat/screens/chat.dart';
 import 'package:stuntsync/features/home/screens/home2.dart';
 import 'package:stuntsync/features/my_kids/kids_icon_bottom.dart';
+import 'package:stuntsync/features/my_kids/my_kids.dart';
 import 'package:stuntsync/utils/constants/colors.dart';
 import 'package:stuntsync/utils/constants/image_strings.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
@@ -63,7 +64,7 @@ class BottomNavigationParent extends StatelessWidget {
                               "My Kids",
                               style: Theme.of(context).textTheme.titleLarge,
                               ),
-                              IconButton(onPressed: (){}, icon: const Icon(Iconsax.add))
+                              IconButton(onPressed: () => Get.to(() => const MyKidsScreen()), icon: const Icon(Iconsax.add))
                             ],
                             ),
 

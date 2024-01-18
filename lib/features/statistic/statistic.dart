@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:get_storage/get_storage.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:stuntsync/features/statistic/widgets/card.dart';
+import 'package:stuntsync/utils/constants/image_strings.dart';
 import 'package:stuntsync/utils/helpers/helper.dart';
 
 import '../../common/dummy/color.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/text_strings.dart';
+import '../home/screens/widgets/kids_param.dart';
 
 
 class StatisticPage extends StatefulWidget {
@@ -41,8 +44,7 @@ class _StatisticPageState extends State<StatisticPage> {
         ),
 
       ),
-      body: SingleChildScrollView(
-        child:
+      body: ListView(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -227,21 +229,22 @@ class _StatisticPageState extends State<StatisticPage> {
                             ),
                           ),
                         ),
-                      )),
-                  SizedBox(
-                    height: media.width * 0.05,
+                      )
                   ),
-                  SizedBox(
-                    height: media.width * 0.05,
-                  ),
+                  const SizedBox(height: SSSizes.defaultSpace),
+                  KidsParam(dark: dark, tittle: SSText.height),
+                  const SizedBox(height: SSSizes.defaultSpace),
+                  Stack(children: [
+                    KidsParam(dark: dark, tittle: SSText.recommendation),
+                  ],
+                  )
                 ],
               ),
-            ),
-            SizedBox(
-              height: media.width * 0.05,
+
             ),
           ],
         ),
+      ]
       ),
     );
   }
@@ -252,11 +255,8 @@ class _StatisticPageState extends State<StatisticPage> {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
     isCurved: true,
-    gradient: LinearGradient(colors: [
-      TColor.primaryColor2,
-      TColor.primaryColor1,
-    ]),
-    barWidth: 2,
+    color: SSColors.buttonPrimary,
+    barWidth: 3,
     isStrokeCapRound: true,
     dotData: FlDotData(
       show: true,
@@ -269,13 +269,12 @@ class _StatisticPageState extends State<StatisticPage> {
     ),
     belowBarData: BarAreaData(show: false),
     spots: const [
-      FlSpot(1, 35),
-      FlSpot(2, 70),
-      FlSpot(3, 40),
-      FlSpot(4, 80),
-      FlSpot(5, 25),
-      FlSpot(6, 70),
-      FlSpot(7, 35),
+      FlSpot(1, 70),
+      FlSpot(2, 71),
+      FlSpot(3, 74),
+      FlSpot(4, 75),
+      FlSpot(5, 76),
+      FlSpot(6, 78.6),
     ],
   );
 
@@ -289,24 +288,24 @@ class _StatisticPageState extends State<StatisticPage> {
   Widget rightTitleWidgets(double value, TitleMeta meta) {
     final dark = SSHelper.isDarkMode(context);
     String text;
-    switch (value.toInt()) {
+    switch (value.toDouble()) {
       case 0:
-        text = '0%';
+        text = '0';
         break;
       case 20:
-        text = '20%';
+        text = '20';
         break;
       case 40:
-        text = '40%';
+        text = '40';
         break;
       case 60:
-        text = '60%';
+        text = '60';
         break;
       case 80:
-        text = '80%';
+        text = '80';
         break;
       case 100:
-        text = '100%';
+        text = '100';
         break;
       default:
         return Container();
@@ -336,25 +335,22 @@ class _StatisticPageState extends State<StatisticPage> {
     Widget text;
     switch (value.toInt()) {
       case 1:
-        text = Text('Sun', style: style);
+        text = Text('10/11', style: style);
         break;
       case 2:
-        text = Text('Mon', style: style);
+        text = Text('24/11', style: style);
         break;
       case 3:
-        text = Text('Tue', style: style);
+        text = Text('08/12', style: style);
         break;
       case 4:
-        text = Text('Wed', style: style);
+        text = Text('22/12', style: style);
         break;
       case 5:
-        text = Text('Thu', style: style);
+        text = Text('12/01', style: style);
         break;
       case 6:
-        text = Text('Fri', style: style);
-        break;
-      case 7:
-        text = Text('Sat', style: style);
+        text = Text('26/01', style: style);
         break;
       default:
         text = const Text('');
@@ -367,8 +363,4 @@ class _StatisticPageState extends State<StatisticPage> {
       child: text,
     );
   }
-}
-
-class MealScheduleView {
-  const MealScheduleView();
 }

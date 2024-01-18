@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: SSSpacingStyles.paddingWithAppBarHeight,
+            padding: SSSpacingStyle.paddingWithAppBarHeight,
             child: Column(
               children: [
                 const SSLoginHeader(),

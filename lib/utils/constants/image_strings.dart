@@ -17,6 +17,8 @@ class SSImages {
   // -- Email Verification
   static const String deliveredEmailIllustration = "assets/images/signup_images/email_verification_img.png";
   static const String accountSuccessIllustration = "assets/images/signup_images/create_account_success_img.png";
+  static const String successfullyRegisterAnimation = "assets/images/signup_images/create_account_success_img.png";
+  static const String staticSuccessIllustration = "assets/images/signup_images/create_account_success_img.png";
 
   // -- Choose Your Role Page
   static const String parentImage = "assets/images/signup_images/parent_img.png";
